@@ -287,7 +287,7 @@ namespace WpfTekCafePresentation
             }
         }
 
-        private viod btnClearFilter_Click(object sender, RoutedEventArgs e)
+        private void btnClearFilter_Click(object sender, RoutedEventArgs e)
         {
             _filteredProjects = _projects;
             dgSellTek.ItemSource = _filteredProjects;
