@@ -53,7 +53,6 @@ namespace LogicLayer
             return employee;
         }
 
-
         //Method to Hash our password 
 
         private string hashSHA256(string source)

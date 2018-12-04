@@ -39,19 +39,19 @@ namespace WpfTekCafePresentation
             _employee = null;
 
             btnLogin.Content = "Sign On";
-            txtUserName.Visibility = Visibility.Visible;
+            txtEmployeeName.Visibility = Visibility.Visible;
             pwdPassword.Visibility = Visibility.Visible;
-            txtUserName.Text = "Enter Email";
+            txtEmployeeName.Text = "Enter Email";
             pwdPassword.Password = "Enter Password";
             MessageBox.Content = "Welcome";
             Alert.Content = "Log in to Continue.";
-            txtUserName.Focus();
-            txtUserName.SelectAll();
+            txtEmployeeName.Focus();
+            txtEmployeeName.SelectAll();
             hideAllEmployeeTabs();
 
         }
 
-        private void hideAllUserTabs()
+        private void hideAllEmployeeTabs()
         {
             foreach (TabItem item in tabViewMain.Items)
             {
@@ -59,15 +59,13 @@ namespace WpfTekCafePresentation
             }
         }
 
-
-
         private void setupWindow()
         {
             //window for authorized login
             btnLogin.Content = "Log Out.";
-            txtUserName.Visibility = Visibility.Hidden;
+            txtEmployeeName.Visibility = Visibility.Hidden;
             pwdPassword.Visibility = Visibility.Hidden;
-            txtUserName.Clear();
+            txtEmployeeName.Clear();
             pwdPassword.Clear();
 
             string name = _employee.FirstName + " " + _employee.LastName;
@@ -91,7 +89,6 @@ namespace WpfTekCafePresentation
 
             showEmployeeTabs();
         }
-
 
         private void showEmployeeTabs()
         {
@@ -134,15 +131,14 @@ namespace WpfTekCafePresentation
             }
         }
 
-
-        private void frmMain_Loaded(object sender, RoutedEventArgs e)
+        private void tekFrmMain_Loaded(object sender, RoutedEventArgs e)
         {
             resetWindow();
         }
 
         private void txtUserName_GotFocus(object sender, RoutedEventArgs e)
         {
-            txtUserName.SelectAll();
+            txtEmployeeName.SelectAll();
         }
 
         private void pwdPassword_GotFocus(object sender, RoutedEventArgs e)
@@ -150,11 +146,9 @@ namespace WpfTekCafePresentation
             pwdPassword.SelectAll();
         }
 
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             // login or logout depending on _employee state
-
             if (this._employee != null) // someone is already loggied in
             {
                 resetWindow(); // log out
@@ -162,13 +156,13 @@ namespace WpfTekCafePresentation
             }
             //Since, no one is logged in proceed...
 
-            string employeeName = txtUserName.Text;
+            string employeeName = txtEmployeeName.Text;
             string password = pwdPassword.Password;
 
             if (employeeName.Length > 255 || employeeName.Length < 7)
             {
                 MessageBox.Show("Invalid Employee!");
-                txtUserName.Focus();
+                txtEmployeeName.Focus();
                 return;
             }
             if (password.Length < 6)
@@ -179,7 +173,7 @@ namespace WpfTekCafePresentation
             }
             try
             {
-                _employee = _employeerManager.AuthenticateUser(employeeName, password);
+                _employee = _employeeManager.AuthenticateEmployee(employeeName, password);
                 if (_employee != null)
                 {
                     MessageBox.Show(_employee.FirstName + ", you are authorized!");
@@ -187,7 +181,7 @@ namespace WpfTekCafePresentation
                     {
                         this.Alert.Content = "You are logged in as " + _employee.Roles[0] + ". Update your password to continue.";
 
-                        var chPassword = new frmUpdatePassword(_employee, _employeeManager, true);
+                        var chPassword = new formUpdatePassword(_employee, _employeeManager, true);
 
                         if (chPassword.ShowDialog() == true)
                         {
@@ -211,11 +205,6 @@ namespace WpfTekCafePresentation
             }
         }
 
-
-
-
-
-
         private void showRoles()
         {
             string roleString = "";
@@ -230,13 +219,13 @@ namespace WpfTekCafePresentation
         {
             try
             {
-                _projects = _projectManager.RetrieveProjectsByPhase("Intenent Products");
+                _projects = _projectManager.GetProjectsByPhase("Intenent Products");
                 if (cboProjectType.Items.Count == 0)
                 {
-                    var projectTypes = _projectManager.RetrieveProjectTypes();
+                    var projectTypes = _projectManager.GetProjectTypes();
                     foreach (var p in projectTypes)
                     {
-                        cboBoatType.Items.Add(p);
+                        cboProjectType.Items.Add(p);
                     }
 
                     cboProjectType.Items.Add("Show All");
@@ -257,18 +246,16 @@ namespace WpfTekCafePresentation
             }
         }
 
-
         private void btnFilter_Click(object sender, RoutedEventArgs e)
         {
             filterSellTekGrid();
         }
 
-
         private void filterSellTekGrid()
         {
             try
             {
-                int theWorkStation = int.Parse(txtCapacity.Text);
+                int theWorkStation = int.Parse(txtWorkStation.Text);
                 _filteredProjects = _projects.FindAll(w => w.WorkStation >= theWorkStation);
 
                 if (cboProjectType.SelectedItem.ToString() != "Show All")
@@ -297,7 +284,7 @@ namespace WpfTekCafePresentation
 
         private void cboProjectType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _filteredProjectsGrid();
+            filterSellTekGrid();
         }
 
         private void dgSellTek_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -308,7 +295,7 @@ namespace WpfTekCafePresentation
 
 
 
-            var detailView = new frmAddEditProject(selectedProject, DetailPurpose.SellTek);
+            var detailView = new formAddEditProject(selectedProject, DetailPurpose.SellTek);
 
             var result = detailView.ShowDialog();
 
@@ -332,17 +319,17 @@ namespace WpfTekCafePresentation
         {
             try
             {
-                _projects = _projectManager.RetrieveProjectsByPhase();
-                if (cboBoatType.Items.Count == 0)
+                _projects = _projectManager.GetProjectsByPhase();
+                if (cboProjectType.Items.Count == 0)
                 {
-                    var projectType = _projectManager.RetrieveProjectTypes();
-                    foreach (var p in projectTypes)
+                    var projectType = _projectManager.GetProjectTypes();
+                    foreach (var p in projectType)
                     {
                         cboProjectType.Items.Add(p);
                     }
 
                     cboProjectType.Items.Add("Show All");
-                    cboBoatType.SelectedItem = "Show All";
+                    cboProjectType.SelectedItem = "Show All";
 
                 }
                 if (_filteredProjects == null)
@@ -363,7 +350,7 @@ namespace WpfTekCafePresentation
 
             MessageBox.Show(selectedProject.Name);
 
-            var detailView = new frmAddEditProject(selectedProject);
+            var detailView = new formAddEditProject(selectedProject);
             //this pops up the detail window..
             var result = detailView = detailView.ShowDialog();
             if (result == true)
@@ -372,8 +359,8 @@ namespace WpfTekCafePresentation
                 {
                     this._filteredProjects = null;
                     this._projects = null;
-                    _projects = _projectManager.GetBoatsByPhase();
-                    if (cboBoatType.Items.Count == 0)
+                    _projects = _projectManager.GetProjectsByPhase();
+                    if (cboProjectType.Items.Count == 0)
                     {
                         var projectTypes = _projectManager.GetProjectTypes();
                         foreach (var p in projectTypes)
@@ -382,7 +369,7 @@ namespace WpfTekCafePresentation
                         }
 
                         cboProjectType.Items.Add("Show All");
-                        cboBoatType.SelectedItem = "Show All";
+                        cboProjectType.SelectedItem = "Show All";
                     }
                     if (_filteredProjects == null)
                     {
