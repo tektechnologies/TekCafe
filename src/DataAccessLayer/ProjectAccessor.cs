@@ -67,9 +67,6 @@ namespace DataAccessLayer
         }
 
 
-
-
-
         public static List<string> SelectAllProjectTypes()
         {
             List<string> projectTypes = new List<string>();

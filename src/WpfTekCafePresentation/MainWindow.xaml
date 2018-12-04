@@ -5,8 +5,157 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTekCafePresentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Tek Cafe" x:Name="tekFrmMain" Height="800" Width="1000" Loaded="tekFrmMain_Loaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" >
+            <Menu Background="#bebebe">
+                <MenuItem Header="File"></MenuItem>
+                <MenuItem Header="Edit"></MenuItem>
+                <MenuItem Header="Help"></MenuItem>
+            </Menu>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Background="#0865cf">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="txtEmployeeName" TabIndex="0" TextAlignment="Center" 
+                     HorizontalAlignment="Center" Text="Enter Email." 
+                     Width="180" Height="25" Grid.Column="1" 
+                     GotFocus="EmployeeName_GotFocus" />
+            <PasswordBox x:Name="pwdPassword" TabIndex="1" VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center"  Password="password" 
+                     Margin="10 5" Height="25" Grid.Column="2" 
+                     GotFocus="pwdPassword_GotFocus"/>
+            <Button x:Name="btnLogin" TabIndex="2" Content="Log In" Margin="10 5" 
+                     Height="30" Grid.Column="3" IsDefault="True" Click="btnLogin_Click" />
+        </Grid>
+
+        <!--Start of Grid Row 2-->
+            <Grid Grid.Row="2">
+                <TabControl x:Name="tabViewMain">
+                <TabItem x:Name="tabSellTek" Header="Tek Sale!" GotFocus="tabSellTek_GotFocus">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition />
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Column="0" VerticalContentAlignment="Center" Padding="5"
+                                   HorizontalAlignment="Right" Content="Workstation Location:"/>
+                                
+                                <TextBox x:Name="txtWorkStation" Grid.Column="1" Margin="5" Text="1"
+                                     HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+
+                            <ComboBox x:Name="cboProjectType" Grid.Column="2" Margin="5" VerticalContentAlignment="Center" SelectionChanged="cboProjectType_SelectionChanged" />
+
+                                <Button x:Name="btnFilter" Grid.Column="3" Margin="5" 
+                                    Content="Filter" Click="btnFilter_Click"/>
+                                
+                                <Button x:Name="btnClearFilter" Grid.Column="4" Margin="5" 
+                                    Content="Clear Filter" Click="btnClearFilter_Click" />
+                            </Grid>
+
+                        <DataGrid x:Name="dgSellTek" Grid.Row="1" MouseDoubleClick="dgSellTek_MouseDoubleClick" 
+                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#FFF2F3D5" 
+                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgRental_AutoGeneratingColumn"  >
+                            </DataGrid>                            
+                        </Grid>
+                    
+                    
+                    </TabItem>
+                    <TabItem x:Name="tabCheckout" Header="Ready for Coffee and Code.">
+
+                    </TabItem>
+                    
+                    <TabItem x:Name="tabReviews" Header="Project Plan and Review">
+
+                    </TabItem>
+                    
+                    <TabItem x:Name="tabHostSite" Header="Host Project">
+
+                    </TabItem>
+
+                <TabItem x:Name="tabDevelops" Header="Project Development">
+
+                    </TabItem>
+
+
+                <TabItem x:Name="tabDeveloper" Header="Manage Projects" GotFocus=" tabDeveloper_GotFocus">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+
+                            <DataGrid Grid.Row="0" x:Name="dgManage"  
+                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#FFF2F3D5" 
+                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn" 
+                                  MouseDoubleClick="dgManage_MouseDoubleClick"  >
+                            </DataGrid>
+                            <Button x:Name="btnAddProject" Content="Add New" Width="80" Margin="8" Grid.Row="1" Click="btnAddProject_Click"></Button>
+                        </Grid>
+                    </TabItem>
+                    
+                 
+                    
+                    <TabItem x:Name="tabAdmin" Header="Administer Users">
+
+                    </TabItem>
+                </TabControl>
+            </Grid>
+   
+
+        <!--Start of Grid Row 3-->
+        <Grid Grid.Row="3" Background="#bebebe">
+            <StatusBar>
+                <StatusBarItem HorizontalAlignment="Left" Padding="40 0" FontSize="15" FontWeight="Bold" x:Name="Message" Content="Hello" Background="White" Margin="5"/>
+                <StatusBarItem Padding="40 0" FontSize="13" FontWeight="Bold" x:Name="Alert" Content="Time to sell Tek and coffee." Background="White" Margin="5"/>
+            </StatusBar>
+            
+
+        </Grid>
+        <!--Start of Grid Row 4-->
+        <Grid Grid.Row="4" Background="#0865cf" >
+
+            
+            
+            
+            
+            
+        </Grid>
+
         
+
+
+
+
+
+
+
     </Grid>
 </Window>
+
+        
