@@ -55,11 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="formAddEditProject.xaml">
+    <Page Include="frmAddEditProject.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="formUpdatePassword.xaml">
+    <Page Include="frmUpdatePassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,11 +71,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="formAddEditProject.xaml.cs">
-      <DependentUpon>formAddEditProject.xaml</DependentUpon>
+    <Compile Include="frmAddEditProject.xaml.cs">
+      <DependentUpon>frmAddEditProject.xaml</DependentUpon>
     </Compile>
-    <Compile Include="formUpdatePassword.xaml.cs">
-      <DependentUpon>formUpdatePassword.xaml</DependentUpon>
+    <Compile Include="frmUpdatePassword.xaml.cs">
+      <DependentUpon>frmUpdatePassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

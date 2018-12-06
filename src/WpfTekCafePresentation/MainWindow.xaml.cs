@@ -181,7 +181,7 @@ namespace WpfTekCafePresentation
                     {
                         this.Alert.Content = "You are logged in as " + _employee.Roles[0] + ". Update your password to continue.";
 
-                        var chPassword = new formUpdatePassword(_employee, _employeeManager, true);
+                        var chPassword = new frmUpdatePassword(_employee, _employeeManager, true);
 
                         if (chPassword.ShowDialog() == true)
                         {
@@ -295,7 +295,7 @@ namespace WpfTekCafePresentation
 
 
 
-            var detailView = new formAddEditProject(selectedProject, DetailPurpose.SellTek);
+            var detailView = new frmAddEditProject(selectedProject, DetailPurpose.SellTek);
 
             var result = detailView.ShowDialog();
 
@@ -350,7 +350,7 @@ namespace WpfTekCafePresentation
 
             MessageBox.Show(selectedProject.Name);
 
-            var detailView = new formAddEditProject(selectedProject);
+            var detailView = new frmAddEditProject(selectedProject);
             //this pops up the detail window..
             var result = detailView = detailView.ShowDialog();
             if (result == true)

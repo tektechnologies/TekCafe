@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfTekCafePresentation
 {
     /// <summary>
-    /// Interaction logic for formUpdatePassword.xaml
+    /// Interaction logic for frmUpdatePassword.xaml
     /// </summary>
-    public partial class formUpdatePassword : Page
+    public partial class frmUpdatePassword : Window
     {
-        public formUpdatePassword()
+        public frmUpdatePassword()
         {
             InitializeComponent();
         }

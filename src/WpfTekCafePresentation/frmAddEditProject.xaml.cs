@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfTekCafePresentation
 {
     /// <summary>
-    /// Interaction logic for formAddEditProject.xaml
+    /// Interaction logic for frmAddEditProject.xaml
     /// </summary>
-    public partial class formAddEditProject : Page
+    public partial class frmAddEditProject : Window
     {
-        public formAddEditProject()
+        public frmAddEditProject()
         {
             InitializeComponent();
         }
