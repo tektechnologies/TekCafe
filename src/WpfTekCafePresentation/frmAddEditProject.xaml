@@ -1,12 +1,122 @@
 ﻿<Window x:Class="WpfTekCafePresentation.frmAddEditProject"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfTekCafePresentation"
-        mc:Ignorable="d"
-        Title="frmAddEditProject" Height="450" Width="800">
-    <Grid>
+       
+        Title="frmAddEditProject" Height="550" Width="800">
+
+
+
+
+    <Grid Background="#bebebe">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition />
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
         
+        
+        
+        
+        <Grid Grid.Row="0" Margin="0 5 0 0" Background="#0865cf">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="240"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            
+            
+            
+            
+            <Grid Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                
+                <TextBox x:Name="txtBoatLicense" Grid.Row="0" Margin="15 3"/>
+                <Label Grid.Row="1" Content="Boat License" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBoatName" Grid.Row="2" Margin="15 3"/>
+                <Label Grid.Row="3" Content="Name" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cboBoatType" Grid.Row="4" Margin="15 3"/>
+                <Label Grid.Row="5" Content="Boat Type" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+                <CheckBox x:Name="chkActive" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <Label Grid.Row="7" Content="Active" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+            </Grid>
+            
+            
+            
+            
+            <Grid Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                
+                <TextBox x:Name="txtCapacity" Grid.Row="0" Margin="15 3"/>
+                <Label Grid.Row="1" Content="Capacity" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtSlipNumber" Grid.Row="2" Margin="15 3"/>
+                <Label Grid.Row="3" Content="Slip Number" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cboBoatStatus" Grid.Row="4" Margin="15 3"/>
+                <Label Grid.Row="5" Content="Current Status" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <DatePicker x:Name="datePurchase" Grid.Row="6" SelectedDateChanged="datePurchase_SelectedDateChanged"/>
+                <Label x:Name="lblPurchaseDate" Grid.Row="7"  Content="Purchase Date" HorizontalContentAlignment="Center" VerticalAlignment="Top" />
+            </Grid>
+            
+            
+            
+            
+            
+            <Grid Grid.Column="3">
+                <Image x:Name="imgBoat" Margin="5" Source="D:\2018 net ii\PM\BoatRental\boat.jpg"/>
+            </Grid>
+        </Grid>
+        
+        
+        
+        
+        
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Border Padding="3" Margin="5 0" BorderBrush="LightBlue" BorderThickness="2">
+                <TextBox x:Name="txtDescription" Grid.Row="0"  Background="White" />
+            </Border>
+            <Label Grid.Row="1" Content="Description" HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center" />
+        </Grid>
+        
+        
+        
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnBoatAction" Grid.Column="1" Margin="5" Content="Rent" Click="btnBoatAction_Click"/>
+            <Button x:Name="btnBoatActionCancel" Grid.Column="2" Margin="5" Content="Cancel"/>
+        </Grid>
     </Grid>
+
+
+
+
 </Window>
