@@ -19,7 +19,7 @@ namespace WpfTekCafePresentation
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// This Screen will be used by the Baristas and Developers.
+    /// This Screen will be used by the Baristas and Develcdopers.
     /// </summary>
     public partial class MainWindow : Window
     {

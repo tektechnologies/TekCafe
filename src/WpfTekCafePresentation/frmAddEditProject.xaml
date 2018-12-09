@@ -1,12 +1,182 @@
 ﻿<Window x:Class="WpfTekCafePresentation.frmAddEditProject"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfTekCafePresentation"
-        mc:Ignorable="d"
-        Title="frmAddEditProject" Height="450" Width="800">
-    <Grid>
+       
+        Title="Manage Project Phase" Height="550" Width="840">
+
+
+
+    <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
+    
+
+    <!-- Here's  the Row Definition for the window.  -->
+    <Grid Background="#bebebe">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!-- Here's the column definitions for the rows.  -->
+
         
+
+
+
+        <!-- Here's  row one with its two row definitions -->
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                
+                <RowDefinition Height="25"/>
+                <RowDefinition />
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Add Client Project Description Details." HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center" />
+
+
+            <TextBox x:Name="txtDescription" Grid.Row="1"  Background="White" BorderBrush="LightBlue" BorderThickness="12"/>
+
+            <Label Grid.Row="2" Content="Add some data binding to the phase cost."  />
+
+        </Grid>
+
+
+
+
+
+
+        <Grid Grid.Row="1" Margin="0 5 0 0" Background="#0865cf">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+
+
+
+
+
+
+
+            <Grid Grid.Column="0" Background="#bebebe">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    
+                </Grid.RowDefinitions>
+                <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
+                <Label Grid.Row="0" Content="Search" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtID" Grid.Row="1" Margin="15 3"/>
+                
+
+            </Grid>
+
+            <!-- Here's column zero  within grid row zero. This column has 8 row definitions. -->
+
+
+            <Grid Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+                <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
+                <Label Grid.Row="0" Content="Project ID" HorizontalContentAlignment="Center" VerticalAlignment="Top"   Foreground="#FFE0E0E0" />
+                <TextBox x:Name="txtProjectID" Grid.Row="1" Margin="15 3"/>
+
+
+                <Label Grid.Row="2" Content="Name" HorizontalContentAlignment="Center" VerticalAlignment="Top" Foreground="#FFE0E0E0"/>
+                <TextBox x:Name="txtProjectName" Grid.Row="3" Margin="15 3"/>
+
+                <Label Grid.Row="4" Content="Project Type" HorizontalContentAlignment="Center" VerticalAlignment="Center" Foreground="#FFE0E0E0"/>
+                <ComboBox x:Name="cboProjectType" Grid.Row="5" Margin="15 3"/>
+
+
+
+                <Label x:Name="lblPurchaseDate" Grid.Row="6"  Content="Purchase Date" HorizontalContentAlignment="Center" VerticalAlignment="Top" Foreground="#FFE0E0E0"/>
+                <DatePicker x:Name="datePurchase" Grid.Row="7" SelectedDateChanged="datePurchase_SelectedDateChanged"/>
+
+
+
+            </Grid>
+
+
+
+            <!-- Here's the column one row def for the text boxes and labels -->
+            <Grid Grid.Column="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="WorkStation" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtWorkStation" Grid.Row="1" Margin="15 3"/>
+
+
+                <Label Grid.Row="2" Content="Client ID" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtClientID" Grid.Row="3" Margin="15 3"/>
+
+
+                <Label Grid.Row="4" Content="Project Phase" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cboProjectPhase" Grid.Row="5" Margin="15 3"/>
+
+                <CheckBox x:Name="chkActive" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Bottom"/>
+                <Label Grid.Row="7" Content="Active" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
+
+              
+            </Grid>
+
+
+
+
+            <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
+
+            <Grid Grid.Column="3">
+                <Image x:Name="imgBoat" Margin="5" Source="D:\2018 net ii\PM\BoatRental\boat.jpg"/>
+            </Grid>
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+        <!-- Bottom row for Developer Help Add Help Link -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnProjectAction" Grid.Column="1" Margin="5" Content="Start Project" Click="btnProjectAction_Click"/>
+            <Button x:Name="btnProjectActionCancel" Grid.Column="2" Margin="5" Content="Cancel"/>
+        </Grid>
     </Grid>
+
+    
+
+
 </Window>
