@@ -184,7 +184,7 @@ namespace DataAccessLayer
             int rows = 0;
 
             var conn = DBConnection.GetDBConnection();
-            var cmdText = "sp_insert_project";
+            var cmdText = "sp_insert_tekcafeproject";
             var cmd = new SqlCommand(cmdText, conn);
             cmd.CommandType = CommandType.StoredProcedure;
 

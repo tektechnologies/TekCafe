@@ -43,7 +43,7 @@ namespace WpfTekCafePresentation
             pwdPassword.Visibility = Visibility.Visible;
             txtEmployeeName.Text = "Enter Email";
             pwdPassword.Password = "Enter Password";
-            MessageBox.Content = "Welcome";
+            Message.Content = "Welcome";
             Alert.Content = "Log in to Continue.";
             txtEmployeeName.Focus();
             txtEmployeeName.SelectAll();
@@ -62,7 +62,7 @@ namespace WpfTekCafePresentation
         private void setupWindow()
         {
             //window for authorized login
-            btnLogin.Content = "Log Out.";
+            btnLogin.Content = "Sign Out.";
             txtEmployeeName.Visibility = Visibility.Hidden;
             pwdPassword.Visibility = Visibility.Hidden;
             txtEmployeeName.Clear();
@@ -161,7 +161,7 @@ namespace WpfTekCafePresentation
 
             if (employeeName.Length > 255 || employeeName.Length < 7)
             {
-                MessageBox.Show("Invalid Employee!");
+                MessageBox.Show("Invalid Employee Name!");
                 txtEmployeeName.Focus();
                 return;
             }
@@ -177,13 +177,13 @@ namespace WpfTekCafePresentation
                 if (_employee != null)
                 {
                     MessageBox.Show(_employee.FirstName + ", you are authorized!");
-                    if (_employee.Roles[0] == "Welcome New User")
+                    if (_employee.Roles[0] == "Welcome New Employee.")
                     {
                         this.Alert.Content = "You are logged in as " + _employee.Roles[0] + ". Update your password to continue.";
 
-                        var chPassword = new frmUpdatePassword(_employee, _employeeManager, true);
+                        var changePassword = new frmUpdatePassword(_employee, _employeeManager, true);
 
-                        if (chPassword.ShowDialog() == true)
+                        if (changePassword.ShowDialog() == true)
                         {
                             setupWindow();
                         }
@@ -236,7 +236,7 @@ namespace WpfTekCafePresentation
                     _filteredProjects = _projects;
                 }
 
-                dgSellTek.ItemSource = _filteredProjects;
+                dgSellTek.ItemsSource = _filteredProjects;
 
 
             }
@@ -262,7 +262,7 @@ namespace WpfTekCafePresentation
                 {
                     _filteredProjects = _filteredProjects.FindAll(w => w.ProjectTypeID == cboProjectType.SelectedItem.ToString());
                 }
-                dgSellTek.ItemSource = _filteredProjects;
+                dgSellTek.ItemsSource = _filteredProjects;
             }
             catch (Exception)
             {
@@ -277,7 +277,7 @@ namespace WpfTekCafePresentation
         private void btnClearFilter_Click(object sender, RoutedEventArgs e)
         {
             _filteredProjects = _projects;
-            dgSellTek.ItemSource = _filteredProjects;
+            dgSellTek.ItemsSource = _filteredProjects;
             txtWorkStation.Text = "1";
             cboProjectType.SelectedItem = "Show All";
         }
@@ -291,7 +291,7 @@ namespace WpfTekCafePresentation
         {
             var selectedProject = (Project)dgSellTek.SelectedItem;
 
-            MessageBox.Show(selectedProject.Name);
+           // MessageBox.Show(selectedProject.Name);
 
 
 
@@ -348,11 +348,11 @@ namespace WpfTekCafePresentation
         {
             var selectedProject = (Project)dgManage.SelectedItem;
 
-            MessageBox.Show(selectedProject.Name);
+           // MessageBox.Show(selectedProject.Name);
 
             var detailView = new frmAddEditProject(selectedProject);
             //this pops up the detail window..
-            var result = detailView = detailView.ShowDialog();
+            var result = detailView.ShowDialog();
             if (result == true)
             {
                 try
@@ -376,7 +376,7 @@ namespace WpfTekCafePresentation
                         _filteredProjects = _projects;
                     }
 
-                    dgManage.ItemSource = _filteredProjects;
+                    dgManage.ItemsSource = _filteredProjects;
                 }
                 catch (Exception ex)
                 {
