@@ -5,16 +5,19 @@ BEGIN
 	print '' print '*** Dropping database tekCafe_DbPM'
 END
 GO
+/* Create the Database. */
 
 print '' print '*** Creating database tekCafe_DbPM'
 GO
 CREATE DATABASE [tekCafeDbPM]
 GO
+/* Using DB. */
 
 print '' print '*** Using database tekCafeDbPM'
 GO
 USE [tekCafeDbPM]
 GO
+/* Creates Employee Table. */
 
 print '' print '*** Creating the Employee/Barista/Developer table password newdev'
 GO
@@ -44,6 +47,8 @@ INSERT INTO [dbo].[Employee]
 		('Steve', 'Jobs', '13195556789', 'steve@tekcafe.com', 20)
 		
 GO
+
+/* Test for inactive employee */
 
 print '' print '*** Insert In-active Employee test record'
 GO
@@ -195,7 +200,7 @@ VALUES
 	('HardwareRepair'),
 	('SoftwareDeveloper'),
 	('Consultation'),
-	('S/HaaS')
+	('SHaaS')
 GO
 
 print '' print '*** Creating Customer Life Cycle Phase Table'
@@ -222,7 +227,7 @@ GO
 
 
 
-print '' print '*** Creating the Client table password newdev'
+print '' print '*** Creating the Client table and the password is newdev'
 GO
 CREATE TABLE [dbo].[Client](
 	[ClientID]		    [int] IDENTITY(100000, 1) 	NOT NULL,
@@ -244,17 +249,17 @@ GO
 INSERT INTO [dbo].[Client]
 		([FirstName], [LastName], [PhoneNumber], [ClientEmail])
 	VALUES
-	    ('Tom', 'Reddit', '13194200420', 'tom@gmail.com'),
-		('Jeff', 'Diggcom', '13198675309', 'jeff@hotmail.com'),
-		('Steve', 'Macbook', '13195556789', 'steve@yahoo.com'),
-		('Rob', 'Bobber', '13194200420', 'bob@gmail.com'),
-		('Shaun', 'Tron', '13198675309', 'shaun@hotmail.com'),
-		('Earl', 'Sidenbalm', '13195556789', 'earl@yahoo.com'),
-		('Muttly', 'McRuder', '13194200420', 'muttly@gmail.com'),
-		('Geoff', 'Whahahaah', '13198675309', 'geoff@hotmail.com'),
-		('Alex', 'Jimmy', '13193456789', 'alex@yahoo.com'),
-		('Jon', 'Murphy', '11005556789', 'jon@yahoo.com'),
-		('Bacon', 'Applecakes', '13195557789', 'bacon@yahoo.com')
+	    ('Tom', 'Reddit', '13194200420', 'tom@gmail.com'),--100000
+		('Jeff', 'Diggcom', '13198675309', 'jeff@hotmail.com'),--100001
+		('Steve', 'Macbook', '13195556789', 'steve@yahoo.com'),--100002
+		('Rob', 'Bobber', '13194200420', 'bob@gmail.com'),--100003
+		('Shaun', 'Tron', '13198675309', 'shaun@hotmail.com'),--100004
+		('Earl', 'Sidenbalm', '13195556789', 'earl@yahoo.com'),--100005
+		('Muttly', 'McRuder', '13194200420', 'muttly@gmail.com'),--100006
+		('Geoff', 'Whahahaah', '13198675309', 'geoff@hotmail.com'),--100007
+		('Alex', 'Jimmy', '13193456789', 'alex@yahoo.com'),--100008
+		('Jon', 'Murphy', '11005556789', 'jon@yahoo.com'),--100009
+		('Bacon', 'Applecakes', '13195557789', 'bacon@yahoo.com')--100010
 GO
 
 
@@ -332,17 +337,17 @@ INSERT INTO [dbo].[Project]
 	([ProjectID], [Name], [Description], [PurchaseDate], [WorkStation],
 		[ProjectTypeID], [PhaseID], [ClientID])
 VALUES
-	('PROJECT100001', 'Team 1', 'Needs a web site',               '06-15-2018', 3,               'WebSite',     'Ready to InternetCafe', 100001),
-	('PROJECT100002', 'Team 2', 'Needs a Full Stack Application', '06-15-2018', 2,             'FullStackApplication', 'Ready to InternetCafe', 100002),
-	('PROJECT100003', 'Team 3', 'Internet Cafe Medium Roast',     '06-15-2018', 1,                'InternetCafe', 'Ready to InternetCafe', 100003),
-	('PROJECT100004', 'Team 4', 'Home Internet Installation.',    '06-15-2018', 4,                'HomeInterent', 'Ready to InternetCafe', 100004),
-	('PROJECT100005', 'Team 5', 'HardWare Repair iphone Screen',    '06-16-2018', 5,                'HardwareRepair', 'Ready to InternetCafe', 100005),
-	('PROJECT100006', 'Team 6', 'Consultation for Database Product',  '06-17-2018', 6,         'Consultation',       'Ready to InternetCafe', 100006),
-	('PROJECT100007', 'Team 7', 'Needs an JasperSoft Database Dashboard',  '06-18-2018', 7,  'DataBase',       'Ready to InternetCafe', 100007),
-	('PROJECT100008', 'Team 8', 'Using SaaS for Adobe products on Cafe PC.',  '06-19-2018', 8,  'SHaaS',      'Ready to InternetCafe', 100008),
-	('PROJECT100009', 'Team 9', 'Internet Cafe Medium Roast',                '06-20-2018', 1,  'InternetCafe', 'Ready to InternetCafe', 100009),	
-	('PROJECT100010', 'Team 10', 'Internet Cafe Medium Roast',                 '07-15-2018', 1,    'InternetCafe', 'Ready to InternetCafe', 100010),
-	('PROJECT100011', 'Team 11', 'Java Project',                         '07-17-2018', 6,    'SoftwareDeveloper', 'Ready to InternetCafe', 100011)
+	('PROJECT100001', 'Team 1', 'Needs a web site',               '06-15-2018', 3,               'WebSite',     'Ready to InternetCafe', 100000),
+	('PROJECT100002', 'Team 2', 'Needs a Full Stack Application', '06-15-2018', 2,             'FullStackApplication', 'Ready to InternetCafe', 100001),
+	('PROJECT100003', 'Team 3', 'Internet Cafe Medium Roast',     '06-15-2018', 1,                'InternetCafe', 'Ready to InternetCafe', 100002),
+	('PROJECT100004', 'Team 4', 'Home Internet Installation.',    '06-15-2018', 4,                'HomeInterent', 'Ready to InternetCafe', 100003),
+	('PROJECT100005', 'Team 5', 'HardWare Repair iphone Screen',    '06-16-2018', 5,                'HardwareRepair', 'Ready to InternetCafe', 100004),
+	('PROJECT100006', 'Team 6', 'Consultation for Database Product',  '06-17-2018', 6,         'Consultation',       'Ready to InternetCafe', 100005),
+	('PROJECT100007', 'Team 7', 'Needs an JasperSoft Database Dashboard',  '06-18-2018', 7,  'DataBase',       'Ready to InternetCafe', 100006),
+	('PROJECT100008', 'Team 8', 'Using SaaS for Adobe products on Cafe PC.',  '06-19-2018', 8,  'SHaaS',      'Ready to InternetCafe', 100007),
+	('PROJECT100009', 'Team 9', 'Internet Cafe Medium Roast',                '06-20-2018', 1,  'InternetCafe', 'Ready to InternetCafe', 100008),	
+	('PROJECT100010', 'Team 10', 'Internet Cafe Medium Roast',                 '07-15-2018', 1,    'InternetCafe', 'Ready to InternetCafe', 100009),
+	('PROJECT100011', 'Team 11', 'Java Project',                         '07-17-2018', 6,    'SoftwareDeveloper', 'Ready to InternetCafe', 100010)
 GO
 
 
