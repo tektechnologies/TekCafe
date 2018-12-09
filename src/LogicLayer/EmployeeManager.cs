@@ -14,7 +14,7 @@ namespace LogicLayer
    public class EmployeeManager
     {
         //authentication method. 
-        public Employee AuthenticateEmployee(string employeename, string password)
+        public Employee AuthenticateEmployee(string employeeName, string password)
         {
             Employee employee = null;
             bool isNewEmployee = (password == "password");
@@ -27,10 +27,10 @@ namespace LogicLayer
             try
             {
                 //does user exsist
-                if(1 == EmployeeAccessor.VerifyEmployeeNameAndPassword(employeename, password))
+                if(1 == EmployeeAccessor.VerifyEmployeeNameAndPassword(employeeName, password))
                 {
                     //if found create an employee object
-                    employee = EmployeeAccessor.GetEmployeeByEmail(employeename);
+                    employee = EmployeeAccessor.GetEmployeeByEmail(employeeName);
 
                     if (isNewEmployee == true)
                     {

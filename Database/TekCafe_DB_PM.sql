@@ -450,9 +450,9 @@ AS
 	END
 GO
 
-print '' print '*** Creating sp_authorize_user'
+print '' print '*** Creating sp_authorize_employee'
 GO
-CREATE PROCEDURE [dbo].[sp_authorize_user]
+CREATE PROCEDURE [dbo].[sp_authorize_employee]
 	(
 		@Email				[nvarchar](255),
 		@PasswordHash		[nvarchar](100)
@@ -501,9 +501,9 @@ AS
 	END
 GO
 
-print '' print '*** Creating sp_get_user_info_by_email'
+print '' print '*** Creating sp_get_employee_info_by_email'
 GO
-CREATE PROCEDURE sp_get_user_info_by_email
+CREATE PROCEDURE sp_get_employee_info_by_email
 	(
 		@Email 			[nvarchar](255)
 	)

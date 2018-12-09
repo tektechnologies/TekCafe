@@ -25,11 +25,11 @@ namespace WpfTekCafePresentation
         private EmployeeManager _employeeManager;
         private bool _isNewEmployee;
 
-        public frmUpdatePassword()
+        public frmUpdatePassword(Employee employee, EmployeeManager employeeManager, bool isNewEmployee = false)
         {
             this._employee = employee;
             this._employeeManager = employeeManager;
-            this._isNewEmployee = _isNewEmployee;
+            this._isNewEmployee = isNewEmployee;
 
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace WpfTekCafePresentation
                      this.pwdNewPassword.Password,
                     this.pwdOldPassword.Password))
                 {
-                    MessageBox.Show("Password updated.");
+                    MessageBox.Show("Password updated Successfully.");
                     if (_isNewEmployee == true)
                     {
                         _employeeManager.RefreshRoles(_employee, this.txtEmail.Text);

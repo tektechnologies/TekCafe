@@ -21,7 +21,7 @@ namespace WpfTekCafePresentation
     /// </summary>
     public partial class frmAddEditProject : Window
     {
-        private ProjectManager _projecttManager = new ProjectManager();
+        private ProjectManager _projectManager = new ProjectManager();
         private Project _oldProject; // for edit and detail
         private Project _newProject; // for edit and add
         private DetailPurpose _purpose; // for detail
@@ -126,8 +126,8 @@ namespace WpfTekCafePresentation
         {
             try
             {
-                cboProjectType.ItemsSource = _ProjectManager.GetProjectTypes();
-                cboProjectPhase.ItemsSource = _ProjectManager.GetAllProjectPhase();
+                cboProjectType.ItemsSource = _projectManager.GetProjectTypes();
+                cboProjectPhase.ItemsSource = _projectManager.GetAllProjectPhase();
             }
             catch (Exception)
             {
