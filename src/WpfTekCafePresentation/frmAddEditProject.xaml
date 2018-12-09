@@ -94,19 +94,19 @@
                     <RowDefinition Height="35"/>
                 </Grid.RowDefinitions>
                 <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
-                <Label Grid.Row="0" Content="Project ID" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <Label Grid.Row="0" Content="Project ID" HorizontalContentAlignment="Center" VerticalAlignment="Top"   Foreground="#FFE0E0E0" />
                 <TextBox x:Name="txtProjectID" Grid.Row="1" Margin="15 3"/>
 
 
-                <Label Grid.Row="2" Content="Name" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtBoatName" Grid.Row="3" Margin="15 3"/>
+                <Label Grid.Row="2" Content="Name" HorizontalContentAlignment="Center" VerticalAlignment="Top" Foreground="#FFE0E0E0"/>
+                <TextBox x:Name="txtProjectName" Grid.Row="3" Margin="15 3"/>
 
-                <Label Grid.Row="4" Content="Project Type" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Row="4" Content="Project Type" HorizontalContentAlignment="Center" VerticalAlignment="Center" Foreground="#FFE0E0E0"/>
                 <ComboBox x:Name="cboProjectType" Grid.Row="5" Margin="15 3"/>
 
-                
 
-                <Label x:Name="lblPurchaseDate" Grid.Row="6"  Content="Purchase Date" HorizontalContentAlignment="Center" VerticalAlignment="Top" />
+
+                <Label x:Name="lblPurchaseDate" Grid.Row="6"  Content="Purchase Date" HorizontalContentAlignment="Center" VerticalAlignment="Top" Foreground="#FFE0E0E0"/>
                 <DatePicker x:Name="datePurchase" Grid.Row="7" SelectedDateChanged="datePurchase_SelectedDateChanged"/>
 
 
@@ -128,19 +128,19 @@
                     <RowDefinition Height="25"/>
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Content="WorkStation" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <Label Grid.Row="0" Content="WorkStation" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtWorkStation" Grid.Row="1" Margin="15 3"/>
 
 
-                <Label Grid.Row="2" Content="Client ID" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <Label Grid.Row="2" Content="Client ID" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtClientID" Grid.Row="3" Margin="15 3"/>
 
 
-                <Label Grid.Row="4" Content="Project Phase" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <Label Grid.Row="4" Content="Project Phase" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="cboProjectPhase" Grid.Row="5" Margin="15 3"/>
 
-                <CheckBox x:Name="chkActive" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                <Label Grid.Row="7" Content="Active" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+                <CheckBox x:Name="chkActive" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Bottom"/>
+                <Label Grid.Row="7" Content="Active" HorizontalContentAlignment="Center" Foreground="#FFE0E0E0" VerticalAlignment="Top"/>
 
               
             </Grid>
