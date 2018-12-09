@@ -151,7 +151,7 @@
             <!-- Here's a valid comment. Notice it's outside the <UserControl> tag's braces -->
 
             <Grid Grid.Column="3">
-                <Image x:Name="imgBoat" Margin="5" Source="D:\2018 net ii\PM\BoatRental\boat.jpg"/>
+                <Image x:Name="imgProject" Margin="5" Source="C:\Users\Craig\Desktop\Kirkwood\TekCafe\images_project\project.jpg"/>
             </Grid>
 
 

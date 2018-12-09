@@ -99,7 +99,6 @@ namespace DataAccessLayer
         }
 
 
-
         public static List<string> SelectAllProjectPhase()
         {
             List<string> phaseStatus = new List<string>();
@@ -176,7 +175,6 @@ namespace DataAccessLayer
             }
             return rows;
         }
-
 
 
         public static int InsertProject(Project newProject)

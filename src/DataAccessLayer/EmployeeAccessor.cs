@@ -136,8 +136,6 @@ namespace DataAccessLayer
         }
 
 
-
-
         public static int UpdatePassword(string employeename, string newPassword, string oldPassword)
         {
             int rows = 0;

@@ -59,8 +59,6 @@ namespace LogicLayer
         }
 
 
-
-
         public List<string> GetProjectTypes()
         {
             List<string> projectTypes = null;
@@ -95,13 +93,7 @@ namespace LogicLayer
         }
 
 
-
-
-
-
-
-
-
+        
 
     }
 }

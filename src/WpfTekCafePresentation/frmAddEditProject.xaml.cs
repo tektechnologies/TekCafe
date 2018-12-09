@@ -37,11 +37,6 @@ namespace WpfTekCafePresentation
             this.chkActive.IsEnabled = false;
         }
 
-        
-
-
-
-
         public frmAddEditProject(Project oldProject) // constructor for edit project
         {
             InitializeComponent(); // leave as first line
@@ -52,6 +47,7 @@ namespace WpfTekCafePresentation
             this.Title = "Edit the Record for the " + _oldProject.Name;
             this.txtProjectID.IsReadOnly = true;
         }
+
         public frmAddEditProject(Project oldProject, DetailPurpose purpose)
         {   // constructor for detail view
             InitializeComponent();
@@ -60,6 +56,7 @@ namespace WpfTekCafePresentation
             setOldProject();
             setReadOnly();
         }
+
         private void setOldProject()
         {
             txtProjectID.Text = _oldProject.ProjectID;
@@ -119,9 +116,6 @@ namespace WpfTekCafePresentation
             }
         }
 
-
-
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try
@@ -134,7 +128,6 @@ namespace WpfTekCafePresentation
                 MessageBox.Show("Project Types not found.");
             }
         }
-
 
         private void captureNewProject()
         {
@@ -151,14 +144,6 @@ namespace WpfTekCafePresentation
                 Active = (bool)chkActive.IsChecked
             };
         }
-
-       
-           
-
-
-                   
-
-
 
         private void btnProjectAction_Click(object sender, RoutedEventArgs e)
         {
