@@ -42,7 +42,7 @@ GO
 INSERT INTO [dbo].[Employee]
 		([FirstName], [LastName], [PhoneNumber], [Email], [Commission])
 	VALUES
-	    ('Steve', 'Case', '13194200420', 'aolSteve@tekcafe.com', 20),
+	    ('Steve', 'Case', '13194200420', 'aolsteve@tekcafe.com', 20),
 		('Jeff', 'Bozos', '13198675309', 'jeff@tekcafe.com', 20),
 		('Steve', 'Jobs', '13195556789', 'steve@tekcafe.com', 20)
 		

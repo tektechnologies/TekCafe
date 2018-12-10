@@ -35,7 +35,8 @@
             <TextBox x:Name="txtEmployeeName" TabIndex="0" TextAlignment="Center" 
                      HorizontalAlignment="Center" Text="Enter Email." 
                      Width="180" Height="25" Grid.Column="1" 
-                     GotFocus="EmployeeName_GotFocus" />
+                     GotFocus="txtEmployeeName_GotFocus" />
+            
             <PasswordBox x:Name="pwdPassword" TabIndex="1" VerticalContentAlignment="Center" 
                      HorizontalContentAlignment="Center"  Password="password" 
                      Margin="10 5" Height="25" Grid.Column="2" 
@@ -80,7 +81,7 @@
 
                         <DataGrid x:Name="dgSellTek" Grid.Row="1" MouseDoubleClick="dgSellTek_MouseDoubleClick" 
                                   VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#FFF2F3D5" 
-                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgRental_AutoGeneratingColumn"  >
+                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn"  >
                             </DataGrid>                            
                         </Grid>
                     
