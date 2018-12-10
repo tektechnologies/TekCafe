@@ -136,7 +136,7 @@ namespace WpfTekCafePresentation
             resetWindow();
         }
 
-        private void txtUserName_GotFocus(object sender, RoutedEventArgs e)
+        private void txtEmployeeName_GotFocus(object sender, RoutedEventArgs e)
         {
             txtEmployeeName.SelectAll();
         }
@@ -315,7 +315,7 @@ namespace WpfTekCafePresentation
             };
         }
 
-        private void tabManager_GotFocus(object sender, RoutedEventArgs e)
+        private void tabDeveloper_GotFocus(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -353,6 +353,44 @@ namespace WpfTekCafePresentation
             var detailView = new frmAddEditProject(selectedProject);
             //this pops up the detail window..
             var result = detailView.ShowDialog();
+            if (result == true)
+            {
+                try
+                {
+                    this._filteredProjects = null;
+                    this._projects = null;
+                    _projects = _projectManager.GetProjectsByPhase();
+                    if (cboProjectType.Items.Count == 0)
+                    {
+                        var projectTypes = _projectManager.GetProjectTypes();
+                        foreach (var p in projectTypes)
+                        {
+                            cboProjectType.Items.Add(p);
+                        }
+
+                        cboProjectType.Items.Add("Show All");
+                        cboProjectType.SelectedItem = "Show All";
+                    }
+                    if (_filteredProjects == null)
+                    {
+                        _filteredProjects = _projects;
+                    }
+
+                    dgManage.ItemsSource = _filteredProjects;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+
+        private void btnAddProject_Click(object sender, RoutedEventArgs e)
+        {
+            var addProjectForm = new frmAddEditProject();
+            var result = addProjectForm.ShowDialog();
+
             if (result == true)
             {
                 try
