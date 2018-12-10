@@ -172,7 +172,7 @@
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnProjectAction" Grid.Column="1" Margin="5" Content="Start Project" Click="btnProjectAction_Click"/>
-            <Button x:Name="btnProjectActionCancel" Grid.Column="2" Margin="5" Content="Cancel"/>
+            <Button x:Name="btnProjectActionCancel" Grid.Column="2" Margin="5" Content="Cancel" Click="btnProjectActionCancel_Click"/>
         </Grid>
     </Grid>
 

@@ -31,6 +31,16 @@ namespace WpfTekCafePresentation
             InitializeComponent();
             setEditable();
 
+            try
+            {
+                cboProjectType.ItemsSource = _projectManager.GetProjectTypes();
+                cboProjectPhase.ItemsSource = _projectManager.GetAllProjectPhase();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Project Types not found." + "\n" + ex.Message + "\n" + ex.StackTrace);
+            }
+
             this.Title = "Add a Project";
             this.btnProjectAction.Content = "Add";
             this.chkActive.IsChecked = true;
@@ -40,6 +50,16 @@ namespace WpfTekCafePresentation
         public frmAddEditProject(Project oldProject) // constructor for edit project
         {
             InitializeComponent(); // leave as first line
+
+            try
+            {
+                cboProjectType.ItemsSource = _projectManager.GetProjectTypes();
+                cboProjectPhase.ItemsSource = _projectManager.GetAllProjectPhase();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Project Types not found." + "\n" + ex.Message + "\n" + ex.StackTrace);
+            }
 
             _oldProject = oldProject;
             setOldProject();
@@ -51,6 +71,16 @@ namespace WpfTekCafePresentation
         public frmAddEditProject(Project oldProject, DetailPurpose purpose)
         {   // constructor for detail view
             InitializeComponent();
+
+            try
+            {
+                cboProjectType.ItemsSource = _projectManager.GetProjectTypes();
+                cboProjectPhase.ItemsSource = _projectManager.GetAllProjectPhase();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Project Types not found." + "\n" + ex.Message + "\n" + ex.StackTrace);
+            }
 
             _oldProject = oldProject;
             setOldProject();
@@ -118,15 +148,7 @@ namespace WpfTekCafePresentation
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                cboProjectType.ItemsSource = _projectManager.GetProjectTypes();
-                cboProjectPhase.ItemsSource = _projectManager.GetAllProjectPhase();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Project Types not found.");
-            }
+            
         }
 
         private void captureNewProject()
@@ -181,24 +203,9 @@ namespace WpfTekCafePresentation
             lblPurchaseDate.Content = "Purchase Date: " + datePurchase.DisplayDate.ToShortDateString();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void btnProjectActionCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

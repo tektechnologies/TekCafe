@@ -103,7 +103,7 @@ namespace DataAccessLayer
         {
             List<string> phaseStatus = new List<string>();
             var conn = DBConnection.GetDBConnection();
-            var cmd = new SqlCommand("sp_get_tekcafeprojects_by_phase", conn);
+            var cmd = new SqlCommand("sp_get_all_projectsphaseid", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
