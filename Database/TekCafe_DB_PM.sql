@@ -733,3 +733,16 @@ AS
 		RETURN @@ROWCOUNT
 	END
 GO
+
+
+print '' print '*** Creating sp_get_all_projects'
+GO
+CREATE PROCEDURE sp_get_all_projects
+AS
+	BEGIN
+		SELECT [ProjectID], [Name], [Description], [PurchaseDate], 
+		       [WorkStation], [ProjectTypeID], [PhaseID], [ClientID], [Active]
+		FROM   [Project]
+		ORDER BY [ProjectID], [Active]
+	END
+GO

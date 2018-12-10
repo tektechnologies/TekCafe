@@ -20,7 +20,7 @@ namespace DataAccessLayer
 
             if (phase == "All")
             {
-                cmdText = "sp_get_tekcafeproject_by_id";
+                cmdText = "sp_get_all_projects";
                 cmd = new SqlCommand(cmdText, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
             }
@@ -48,7 +48,7 @@ namespace DataAccessLayer
                             WorkStation = read.GetInt32(4),
                             ProjectTypeID = read.GetString(5),
                             PhaseID = read.GetString(6),
-                            ClientID = read.GetString(7),
+                            ClientID = read.GetInt32(7),
                             Active = read.GetBoolean(8)
                         });
                     }

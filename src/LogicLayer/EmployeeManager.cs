@@ -37,7 +37,7 @@ namespace LogicLayer
                         //first clear roles so that employees have enforced access to info
                         employee.Roles.Clear();
                         //then for new employees , added to new employee role. 
-                        employee.Roles.Add("New Employee.");
+                        employee.Roles.Add("Welcome New Employee.");
                     }
 
                 }

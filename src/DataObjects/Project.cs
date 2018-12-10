@@ -15,7 +15,7 @@ namespace DataObjects
         public int WorkStation { get; set; }
         public string ProjectTypeID { get; set; }
         public string PhaseID { get; set; }
-        public string ClientID { get; set; }
+        public int ClientID { get; set; }
         public bool Active { get; set; }
        
 

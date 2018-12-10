@@ -85,7 +85,7 @@ namespace WpfTekCafePresentation
                     roles += " and ";
                 }
             }
-            Alert.Content = "Employee Role or Roles are:" + roles;
+            Alert.Content = "Employee Role is: " + roles;
 
             showEmployeeTabs();
         }
@@ -219,7 +219,7 @@ namespace WpfTekCafePresentation
         {
             try
             {
-                _projects = _projectManager.GetProjectsByPhase("Intenent Products");
+                _projects = _projectManager.GetProjectsByPhase("Internet Products");
                 if (cboProjectType.Items.Count == 0)
                 {
                     var projectTypes = _projectManager.GetProjectTypes();
