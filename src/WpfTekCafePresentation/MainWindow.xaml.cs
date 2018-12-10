@@ -43,8 +43,8 @@ namespace WpfTekCafePresentation
             pwdPassword.Visibility = Visibility.Visible;
             txtEmployeeName.Text = "Enter Email";
             pwdPassword.Password = "Enter Password";
-            Message.Content = "Welcome";
-            Alert.Content = "Log in to Continue.";
+            Message.Content = "Happy Coding";
+            Alert.Content = "Sign on to Continue.";
             txtEmployeeName.Focus();
             txtEmployeeName.SelectAll();
             hideAllEmployeeTabs();
@@ -85,7 +85,7 @@ namespace WpfTekCafePresentation
                     roles += " and ";
                 }
             }
-            Alert.Content = "Employee Role or Roles are:" + roles;
+            Alert.Content = "Employee Role is: " + roles;
 
             showEmployeeTabs();
         }
@@ -156,10 +156,10 @@ namespace WpfTekCafePresentation
             }
             //Since, no one is logged in proceed...
 
-            string employeeName = txtEmployeeName.Text;
+            string employeename = txtEmployeeName.Text;
             string password = pwdPassword.Password;
 
-            if (employeeName.Length > 255 || employeeName.Length < 7)
+            if (employeename.Length > 255 || employeename.Length < 7)
             {
                 MessageBox.Show("Invalid Employee Name!");
                 txtEmployeeName.Focus();
@@ -173,7 +173,7 @@ namespace WpfTekCafePresentation
             }
             try
             {
-                _employee = _employeeManager.AuthenticateEmployee(employeeName, password);
+                _employee = _employeeManager.AuthenticateEmployee(employeename, password);
                 if (_employee != null)
                 {
                     MessageBox.Show(_employee.FirstName + ", you are authorized!");
@@ -200,7 +200,7 @@ namespace WpfTekCafePresentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\n\n" + ex.InnerException.Message);
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -219,7 +219,7 @@ namespace WpfTekCafePresentation
         {
             try
             {
-                _projects = _projectManager.GetProjectsByPhase("Intenent Products");
+                _projects = _projectManager.GetProjectsByPhase("Internet Products");
                 if (cboProjectType.Items.Count == 0)
                 {
                     var projectTypes = _projectManager.GetProjectTypes();

@@ -67,7 +67,7 @@ namespace WpfTekCafePresentation
             txtWorkStation.Text = _oldProject.WorkStation.ToString();
             cboProjectType.SelectedItem = _oldProject.ProjectTypeID;
             cboProjectPhase.SelectedItem = _oldProject.PhaseID;
-            txtClientID.Text = _oldProject.ClientID;
+            txtClientID.Text = _oldProject.ClientID.ToString();
             chkActive.IsChecked = _oldProject.Active;
         }
 
@@ -140,7 +140,7 @@ namespace WpfTekCafePresentation
                 WorkStation = int.Parse(txtWorkStation.Text),     
                 ProjectTypeID = (string)cboProjectType.SelectedValue,                
                 PhaseID = (string)cboProjectPhase.SelectedValue,
-                ClientID = txtClientID.Text,              
+                ClientID = int.Parse(txtClientID.Text),              
                 Active = (bool)chkActive.IsChecked
             };
         }

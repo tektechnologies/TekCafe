@@ -141,8 +141,8 @@ namespace DataAccessLayer
             int rows = 0;
 
             var conn = DBConnection.GetDBConnection();
-
-            string cmdText = "@sp_update_newpassword_hash";
+            
+            string cmdText = "sp_update_newpassword_hash";
 
             var cmd = new SqlCommand(cmdText, conn);
 
