@@ -192,13 +192,13 @@ GO
 INSERT INTO [dbo].[ProjectType]
 	([ProjectTypeID])
 VALUES
-	('InternetCafe'),
-	('WebSite'),
-	('DataBase'),
-	('FullStackApplication'),
-	('HomeInterent'),
-	('HardwareRepair'),
-	('SoftwareDeveloper'),
+	('Internet Cafe'),
+	('Web Site'),
+	('Database'),
+	('Full Stack Application'),
+	('Home Internet'),
+	('Hardware Repair'),
+	('Software Developer'),
 	('Consultation'),
 	('SHaaS')
 GO
@@ -337,17 +337,17 @@ INSERT INTO [dbo].[Project]
 	([ProjectID], [Name], [Description], [PurchaseDate], [WorkStation],
 		[ProjectTypeID], [PhaseID], [ClientID])
 VALUES
-	('PROJECT100001', 'Team 1', 'Needs a web site',               '06-15-2018', 3,               'WebSite',     'Ready to InternetCafe', 100000),
-	('PROJECT100002', 'Team 2', 'Needs a Full Stack Application', '06-15-2018', 2,             'FullStackApplication', 'Ready to InternetCafe', 100001),
-	('PROJECT100003', 'Team 3', 'Internet Cafe Medium Roast',     '06-15-2018', 1,                'InternetCafe', 'Ready to InternetCafe', 100002),
-	('PROJECT100004', 'Team 4', 'Home Internet Installation.',    '06-15-2018', 4,                'HomeInterent', 'Ready to InternetCafe', 100003),
-	('PROJECT100005', 'Team 5', 'HardWare Repair iphone Screen',    '06-16-2018', 5,                'HardwareRepair', 'Ready to InternetCafe', 100004),
+	('PROJECT100001', 'Team 1', 'Needs a web site',               '06-15-2018', 3,               'Web Site',     'Ready to InternetCafe', 100000),
+	('PROJECT100002', 'Team 2', 'Needs a Full Stack Application', '06-15-2018', 2,             'Full Stack Application', 'Ready to InternetCafe', 100001),
+	('PROJECT100003', 'Team 3', 'Internet Cafe Medium Roast',     '06-15-2018', 1,                'Internet Cafe', 'Ready to InternetCafe', 100002),
+	('PROJECT100004', 'Team 4', 'Home Internet Installation.',    '06-15-2018', 4,                'Home Internet', 'Ready to InternetCafe', 100003),
+	('PROJECT100005', 'Team 5', 'HardWare Repair iphone Screen',    '06-16-2018', 5,                'Hardware Repair', 'Ready to InternetCafe', 100004),
 	('PROJECT100006', 'Team 6', 'Consultation for Database Product',  '06-17-2018', 6,         'Consultation',       'Ready to InternetCafe', 100005),
-	('PROJECT100007', 'Team 7', 'Needs an JasperSoft Database Dashboard',  '06-18-2018', 7,  'DataBase',       'Ready to InternetCafe', 100006),
+	('PROJECT100007', 'Team 7', 'Needs an JasperSoft Database Dashboard',  '06-18-2018', 7,  'Database',       'Ready to InternetCafe', 100006),
 	('PROJECT100008', 'Team 8', 'Using SaaS for Adobe products on Cafe PC.',  '06-19-2018', 8,  'SHaaS',      'Ready to InternetCafe', 100007),
-	('PROJECT100009', 'Team 9', 'Internet Cafe Medium Roast',                '06-20-2018', 1,  'InternetCafe', 'Ready to InternetCafe', 100008),	
-	('PROJECT100010', 'Team 10', 'Internet Cafe Medium Roast',                 '07-15-2018', 1,    'InternetCafe', 'Ready to InternetCafe', 100009),
-	('PROJECT100011', 'Team 11', 'Java Project',                         '07-17-2018', 6,    'SoftwareDeveloper', 'Ready to InternetCafe', 100010)
+	('PROJECT100009', 'Team 9', 'Internet Cafe Medium Roast',                '06-20-2018', 1,  'Internet Cafe', 'Ready to InternetCafe', 100008),	
+	('PROJECT100010', 'Team 10', 'Internet Cafe Medium Roast',                 '07-15-2018', 1,    'Internet Cafe', 'Ready to InternetCafe', 100009),
+	('PROJECT100011', 'Team 11', 'Java Project',                         '07-17-2018', 6,    'Software Developer', 'Ready to InternetCafe', 100010)
 GO
 
 
@@ -598,7 +598,7 @@ CREATE PROCEDURE sp_insert_tekcafeproject
 		@WorkStation			[int],
 		@ProjectTypeID		[nvarchar](50),
 		@PhaseID			[nvarchar](50),
-		@ClientID			[nvarchar](50)
+		@ClientID			[int]
 
 	)
 AS

@@ -86,7 +86,7 @@ namespace WpfTekCafePresentation
                 }
             }
             Alert.Content = "Employee Role is: " + roles;
-
+            initializeProjects();
             showEmployeeTabs();
         }
 
@@ -217,9 +217,14 @@ namespace WpfTekCafePresentation
 
         private void tabSellTek_GotFocus(object sender, RoutedEventArgs e)
         {
+            initializeProjects();
+        }
+
+        private void initializeProjects()
+        {
             try
             {
-                _projects = _projectManager.GetProjectsByPhase("Internet Products");
+                _projects = _projectManager.GetProjectsByPhase();
                 if (cboProjectType.Items.Count == 0)
                 {
                     var projectTypes = _projectManager.GetProjectTypes();
@@ -424,7 +429,10 @@ namespace WpfTekCafePresentation
             }
         }
 
-
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
+        }
     }
 }
   

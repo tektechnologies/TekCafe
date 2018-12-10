@@ -80,8 +80,9 @@
                             </Grid>
 
                         <DataGrid x:Name="dgSellTek" Grid.Row="1" MouseDoubleClick="dgSellTek_MouseDoubleClick" 
-                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#FFF2F3D5" 
-                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn"  >
+                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#bebebe" 
+                                  RowBackground="#D3D3D3" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn"  >
+                            
                             </DataGrid>                            
                         </Grid>
                     
@@ -112,8 +113,8 @@
                             </Grid.RowDefinitions>
 
                             <DataGrid Grid.Row="0" x:Name="dgManage"  
-                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#FFF2F3D5" 
-                                  RowBackground="#FFD8F1E6" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn" 
+                                  VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#bebebe" 
+                                  RowBackground="#D3D3D3" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn" 
                                   MouseDoubleClick="dgManage_MouseDoubleClick"  >
                             </DataGrid>
                             <Button x:Name="btnAddProject" Content="Add New" Width="80" Margin="8" Grid.Row="1" Click="btnAddProject_Click"></Button>
@@ -133,19 +134,22 @@
         <Grid Grid.Row="3" Background="#bebebe">
             <StatusBar>
                 <StatusBarItem HorizontalAlignment="Left" Padding="40 0" FontSize="15" FontWeight="Bold" x:Name="Message" Content="Hello" Background="White" Margin="5"/>
-                <StatusBarItem Padding="40 0" FontSize="13" FontWeight="Bold" x:Name="Alert" Content="Time to sell Tek and coffee." Background="White" Margin="5"/>
+                <StatusBarItem Padding="40 0" FontSize="13" FontWeight="Bold" x:Name="Alert" Content="Time to sell Tek and coffee." Background="#bebebe" Margin="5"/>
             </StatusBar>
             
 
         </Grid>
         <!--Start of Grid Row 4-->
-        <Grid Grid.Row="4" Background="#0865cf" >
+        <Grid Grid.Row="4" Background="#bebebe" >
+            <Label   Content="Go to Tek Technologies."   HorizontalAlignment="Center" />
 
-            
-            
-            
-            
-            
+            <TextBlock>
+                <Hyperlink  
+               NavigateUri="http://tektechnologies.com" RequestNavigate="Hyperlink_RequestNavigate">Tek Products</Hyperlink>
+            </TextBlock>
+
+
+
         </Grid>
 
         
