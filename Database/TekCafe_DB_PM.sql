@@ -19,7 +19,7 @@ USE [tekCafeDbPM]
 GO
 /* Creates Employee Table. */
 
-print '' print '*** Creating the Employee/Barista/Developer table password newdev'
+print '' print '*** Creating the Employee/Barista/Developer table password newuser'
 GO
 CREATE TABLE [dbo].[Employee](
 	[EmployeeID]		[int] IDENTITY(100000, 1) 	NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[Employee](
 	[Email]				[nvarchar](255)				NOT NULL,
 	[Commission]		[decimal](5)				NOT NULL,
 	[PasswordHash]		[nvarchar](100)				NOT NULL DEFAULT 
-	'c3474dd290785b4948f65bae90c83f87',
+	'9c9064c59f1ffa2e174ee754d2979be80dd30db552ec03e7e327e9b1a4bd594e',
 	[Active]			[bit]						NOT NULL DEFAULT 1,
 	
 	CONSTRAINT [pk_EmployeeID] PRIMARY KEY([EmployeeID] ASC),

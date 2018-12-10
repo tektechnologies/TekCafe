@@ -34,29 +34,29 @@ pk_ProjectID_ProductID
 
 sp_update_newemployee_email
 
-sp_authorize_user
+sp_authorize_employee   X
 
-sp_get_employee_roles
+sp_get_employee_roles   X
 
-sp_update_newpassword_hash
+sp_update_newpassword_hash     X
 
-sp_get_user_info_by_email
+sp_get_employee_info_by_email    X
 
-sp_get_tekcafeprojects_by_phase
+sp_get_tekcafeprojects_by_phase   X
 
 sp_get_tekcafeprojects_by_term_in_description
 
-sp_get_tekcafeproject_by_id
+sp_get_tekcafeproject_by_id    X
 
 sp_activate_tekcafeproject_by_id
 
-sp_insert_tekcafeproject
+sp_insert_tekcafeproject   X
 
 sp_get_all_projectsphaseid
 
-sp_get_all_projecttypeid
+sp_get_all_projecttypeid    X
 
-sp_update_project_by_id
+sp_update_project_by_id   X
 
 sp_deactivate_tekcafeproject_by_id
 
