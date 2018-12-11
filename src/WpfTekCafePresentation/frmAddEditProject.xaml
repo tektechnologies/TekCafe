@@ -170,9 +170,11 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnProjectAction" Grid.Column="1" Margin="5" Content="Start Project" Click="btnProjectAction_Click"/>
-            <Button x:Name="btnProjectActionCancel" Grid.Column="2" Margin="5" Content="Cancel" Click="btnProjectActionCancel_Click"/>
+            <Button  x:Name="btnProjectDelete" Grid.Column="1"  Margin="5" Content="Delete Project" Click="btnProjectDelete_Click"/>
+            <Button x:Name="btnProjectAction" Grid.Column="2" Margin="5" Content="Start Project" Click="btnProjectAction_Click"/>
+            <Button x:Name="btnProjectActionCancel" Grid.Column="3" Margin="5" Content="Cancel" Click="btnProjectActionCancel_Click"/>
         </Grid>
     </Grid>
 
