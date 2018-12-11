@@ -100,8 +100,8 @@
 
                     </TabItem>
 
-                <TabItem x:Name="tabDevelops" Header="Project Development">
-
+                <TabItem x:Name="tabDevelops" Header="My Projects">
+                        
                 </TabItem>
 
 
@@ -115,7 +115,7 @@
                             <DataGrid Grid.Row="0" x:Name="dgManage"  
                                   VerticalGridLinesBrush="{x:Null}" IsReadOnly="True" AlternatingRowBackground="#bebebe" 
                                   RowBackground="#D3D3D3" AutoGeneratingColumn="dgSellTek_AutoGeneratingColumn" 
-                                  MouseDoubleClick="dgManage_MouseDoubleClick"  >
+                                  MouseDoubleClick="dgManage_MouseDoubleClick">
                             </DataGrid>
                             <Button x:Name="btnAddProject" Content="Add New" Width="80" Margin="8" Grid.Row="1" Click="btnAddProject_Click"></Button>
                         </Grid>
@@ -142,9 +142,9 @@
         </Grid>
         <!--Start of Grid Row 4-->
         <Grid Grid.Row="4" Background="#bebebe" >
-            <Label   Content="Go to Tek Technologies."   HorizontalAlignment="Center" />
+            <Label   Content="Go to Tek Technologies."   HorizontalAlignment="Left" />
 
-            <TextBlock>
+            <TextBlock  HorizontalAlignment="Center" FontSize="23" FontWeight="Bold">
                 <Hyperlink  
                NavigateUri="http://tektechnologies.com" RequestNavigate="Hyperlink_RequestNavigate">Tek Products</Hyperlink>
             </TextBlock>
