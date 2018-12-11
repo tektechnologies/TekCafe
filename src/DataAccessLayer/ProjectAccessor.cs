@@ -193,7 +193,7 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@WorkStation", newProject.WorkStation);
             cmd.Parameters.AddWithValue("@ProjectTypeID", newProject.ProjectTypeID);
             cmd.Parameters.AddWithValue("@PhaseID", newProject.PhaseID);
-            cmd.Parameters.AddWithValue("@ClientID	", newProject.ClientID);
+            cmd.Parameters.AddWithValue("@ClientID", newProject.ClientID);
 
             try
             {
