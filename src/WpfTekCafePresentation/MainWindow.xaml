@@ -48,7 +48,7 @@
         <!--Start of Grid Row 2-->
             <Grid Grid.Row="2">
                 <TabControl x:Name="tabViewMain">
-                <TabItem x:Name="tabSellTek" Header="Tek Sale!" GotFocus="tabSellTek_GotFocus">
+                <TabItem x:Name="tabSellTek" Header="Tek Projects" GotFocus="tabSellTek_GotFocus">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"/>
@@ -88,7 +88,7 @@
                     
                     
                     </TabItem>
-                    <TabItem x:Name="tabCheckout" Header="Ready for Coffee and Code.">
+                    <TabItem x:Name="tabCheckout" Header="Ready for Coffee and Internet.">
 
                     </TabItem>
                     
@@ -102,7 +102,7 @@
 
                 <TabItem x:Name="tabDevelops" Header="Project Development">
 
-                    </TabItem>
+                </TabItem>
 
 
                 <TabItem x:Name="tabDeveloper" Header="Manage Projects" GotFocus=" tabDeveloper_GotFocus">
@@ -121,9 +121,10 @@
                         </Grid>
                     </TabItem>
                     
-                 
-                    
-                    <TabItem x:Name="tabAdmin" Header="Administer Users">
+                
+
+
+                <TabItem x:Name="tabAdmin" Header="Manage Developers">
 
                     </TabItem>
                 </TabControl>
