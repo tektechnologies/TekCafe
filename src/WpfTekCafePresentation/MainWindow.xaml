@@ -88,7 +88,7 @@
                     
                     
                     </TabItem>
-                    <TabItem x:Name="tabCheckout" Header="Ready for Coffee and Code.">
+                    <TabItem x:Name="tabCheckout" Header="Ready for Coffee and Internet.">
 
                     </TabItem>
                     
