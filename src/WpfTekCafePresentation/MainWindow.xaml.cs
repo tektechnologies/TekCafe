@@ -62,7 +62,7 @@ namespace WpfTekCafePresentation
         private void setupWindow()
         {
             //window for authorized login
-            btnLogin.Content = "Sign Out.";
+            btnLogin.Content = "Sign Out";
             txtEmployeeName.Visibility = Visibility.Hidden;
             pwdPassword.Visibility = Visibility.Hidden;
             txtEmployeeName.Clear();
