@@ -64,6 +64,7 @@ namespace WpfTekCafePresentation
             _oldProject = oldProject;
             setOldProject();
             setEditable();
+           //setDeleteProject();
             this.Title = "Edit the Record for the " + _oldProject.Name;
             this.txtProjectID.IsReadOnly = true;
         }
@@ -85,6 +86,7 @@ namespace WpfTekCafePresentation
             _oldProject = oldProject;
             setOldProject();
             setReadOnly();
+            
         }
 
         private void setOldProject()
@@ -206,6 +208,26 @@ namespace WpfTekCafePresentation
         private void btnProjectActionCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+
+
+        
+
+        private void btnProjectDelete_Click(object sender, RoutedEventArgs e)
+        {
+          
+            MessageBox.Show("Are you Sure?");
+            
+                try
+                {
+                    _projectManager.DeleteProject(_oldProject);
+                    this.DialogResult = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Delete Project Incomplete!");
+                }
         }
     }
 }

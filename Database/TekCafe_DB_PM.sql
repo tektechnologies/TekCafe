@@ -732,12 +732,14 @@ CREATE PROCEDURE sp_delete_tekcafeproject_by_id
 	)
 AS
 	BEGIN
+	    -- SET NOCOUNT ON
 		DELETE 	
 		FROM	[Project]
 		WHERE	[ProjectID] = @ProjectID
 		  AND	[Active] = 0
 		  
 		RETURN @@ROWCOUNT
+		-- SET NOCOUNT OFF
 	END
 GO
 

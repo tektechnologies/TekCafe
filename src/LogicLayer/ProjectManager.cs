@@ -41,6 +41,22 @@ namespace LogicLayer
         }
 
 
+        public bool DeleteProject(Project oldProject)
+        {
+            bool result = false;
+
+            try
+            {
+                result = (1 == ProjectAccessor.DeleteProject(oldProject));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return result;
+        }
+
+
         public List<Project> GetProjectsByPhase(string phase = "All")
         {
             List<Project> projects = null;

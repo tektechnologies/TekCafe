@@ -211,5 +211,57 @@ namespace DataAccessLayer
             return rows;
         }
 
+
+        public static int DeleteProject(Project deleteProject)
+        {
+            int rows = 0;
+
+            var conn = DBConnection.GetDBConnection();
+            var cmdText = "sp_delete_tekcafeproject_by_id";
+            var cmd = new SqlCommand(cmdText, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@ProjectID", deleteProject.ProjectID);
+            
+
+            try
+            {
+                conn.Open();
+                rows = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return rows;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
