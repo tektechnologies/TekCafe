@@ -17,11 +17,6 @@ namespace DataObjects
         public string PhaseID { get; set; }
         public int ClientID { get; set; }
         public bool Active { get; set; }
-       
-
-
-  
-
 
     }
 }

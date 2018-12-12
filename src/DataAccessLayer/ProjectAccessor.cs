@@ -242,26 +242,5 @@ namespace DataAccessLayer
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

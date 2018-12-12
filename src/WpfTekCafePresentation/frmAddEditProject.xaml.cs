@@ -211,9 +211,6 @@ namespace WpfTekCafePresentation
         }
 
 
-
-        
-
         private void btnProjectDelete_Click(object sender, RoutedEventArgs e)
         {
           
