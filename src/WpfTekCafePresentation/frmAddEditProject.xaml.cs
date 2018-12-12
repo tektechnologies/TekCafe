@@ -222,6 +222,7 @@ namespace WpfTekCafePresentation
                 try
                 {
                     _projectManager.DeleteProject(_oldProject);
+
                     this.DialogResult = true;
                 }
                 catch (Exception ex)
