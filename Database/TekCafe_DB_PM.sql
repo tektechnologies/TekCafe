@@ -287,19 +287,19 @@ GO
 INSERT INTO [dbo].[Product]
 		([ProductType], [Description], [Image])
 	VALUES
-	    ('Software', 'Adobe Design Computer', 'imageOne.png'),
-		('Software', 'Net Framework PC', 'imageTwo.png'),
-		('Software', 'Java Design Computer', 'imageThree.png'),
-	    ('Hardware', 'Wireless Mesh Network', 'imageFour.png'),
-		('Hardware', 'Hardware Repair', 'imageFive.png '),
-		('Hardware', 'Internet Radio', 'imageSix.png'),
-		('Hardware', 'Internet Camera', 'imageSeven.png'),
-		('Consultation', 'Planning Session', 'imageEight.png'),
-		('Internet', 'Cloud Storage', 'imageNine.png'),
-		('Light', 'Good Morning.', 'imageLightRoast.png'),
-		('Medium', 'Have a Nice Dat.','imageMediumRoast.png'),
-		('Dark', 'Now your awake!', 'imageDarkRoast.png'),
-	    ('Esspresso', 'Fast as the Flash!!!', 'imageEsspressoRoast.png')
+	    ('Software', 'Adobe Design Computer', 'imageOne.png'), --100000
+		('Software', 'Net Framework PC', 'imageTwo.png'), --100001
+		('Software', 'Java Design Computer', 'imageThree.png'),--100002
+	    ('Hardware', 'Wireless Mesh Network', 'imageFour.png'), --100003
+		('Hardware', 'Hardware Repair', 'imageFive.png '), --100004
+		('Hardware', 'Internet Radio', 'imageSix.png'), --100005
+		('Hardware', 'Internet Camera', 'imageSeven.png'), --100006
+		('Consultation', 'Planning Session', 'imageEight.png'), --100007
+		('Internet', 'Cloud Storage', 'imageNine.png'), --100008
+		('Light', 'Good Morning.', 'imageLightRoast.png'), --100009
+		('Medium', 'Have a Nice Dat.','imageMediumRoast.png'), --100010
+		('Dark', 'Now your awake!', 'imageDarkRoast.png'), --100011
+	    ('Esspresso', 'Fast as the Flash!!!', 'imageEsspressoRoast.png') ----100012
 		
 GO
 
@@ -399,20 +399,23 @@ INSERT INTO [dbo].[ProjectProduct]
 		('PROJECT100011', 100002)
 		
 GO
+ 
 
-print '' print '*** Adding ProjectProduct foreign keys'
-GO
-ALTER TABLE [dbo].[ProjectProduct] WITH NOCHECK
-	ADD CONSTRAINT [fk_ProductID] FOREIGN KEY([ProductID])
-		REFERENCES [dbo].[Product]([ProductID])
-	ON UPDATE CASCADE
-GO
 
-ALTER TABLE [dbo].[ProjectProduct] WITH NOCHECK
-	ADD CONSTRAINT [fk_ProjectID] FOREIGN KEY([ProjectID])
-		REFERENCES [dbo].[Project]([ProjectID])
-	ON UPDATE CASCADE
-GO
+
+-- print '' print '*** Adding ProjectProduct foreign keys'
+-- GO
+-- ALTER TABLE [dbo].[ProjectProduct] WITH NOCHECK
+-- 	ADD CONSTRAINT [fk_ProductID] FOREIGN KEY([ProductID])
+-- 		REFERENCES [dbo].[Product]([ProductID])
+-- 	ON UPDATE CASCADE
+-- GO
+
+-- ALTER TABLE [dbo].[ProjectProduct] WITH NOCHECK
+-- 	ADD CONSTRAINT [fk_ProjectID] FOREIGN KEY([ProjectID])
+-- 		REFERENCES [dbo].[Project]([ProjectID])
+-- 	ON UPDATE CASCADE
+-- GO
 
 
 

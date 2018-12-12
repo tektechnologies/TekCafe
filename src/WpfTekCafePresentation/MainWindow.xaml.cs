@@ -353,7 +353,7 @@ namespace WpfTekCafePresentation
         {
             var selectedProject = (Project)dgManage.SelectedItem;
 
-           // MessageBox.Show(selectedProject.Name);
+            MessageBox.Show(selectedProject.Name);
 
             var detailView = new frmAddEditProject(selectedProject);
             //this pops up the detail window..

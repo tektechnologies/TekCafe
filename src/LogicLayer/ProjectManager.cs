@@ -107,8 +107,6 @@ namespace LogicLayer
 
             return projectPhase;
         }
-
-
         
 
     }
