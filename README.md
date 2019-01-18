@@ -1,8 +1,9 @@
 # MillennialResortManager (MRM, Inc.)
 
 
-#Product Owner
-## Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
+##Product Owner
+
+# Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
 
 # Scrum Leaders
 
