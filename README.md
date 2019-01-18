@@ -1,43 +1,43 @@
 # Millennial Resort Manager (MRM, Inc.)
 ---
 
-#### Product Owner
+### Product Owner
 
 ##### Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
 
-#### Database Administrator
+### Database Administrator
 ##### Jared Greenfield
 
-#### Scrum Leaders
+### Scrum Leaders
 ##### Francis
 ##### Dani
 ##### Austin B.
 ##### Dalton
 
-#### Scrum Teams
+## Scrum Teams
 
-#### Scrum Team One
+### Scrum Team One
 ##### Francis
 ##### James
 ##### Ramesh
 ##### Eric
 ##### Matt H.
 
-#### Scrum Team Two
+### Scrum Team Two
 ##### Dani
 ##### Matt L.
 ##### Richard
 ##### Caitlin
 ##### Kevin
 
-#### Scrum Team Three
+### Scrum Team Three
 ##### Austin B.
 ##### Phillip
 ##### Eduardo
 ##### Austin D.
 ##### Wes
 
-#### Scrum Team Four
+### Scrum Team Four
 ##### Dalton
 ##### Carlos
 ##### Alisa
