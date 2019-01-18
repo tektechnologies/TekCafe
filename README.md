@@ -1,4 +1,4 @@
-# MillennialResortManager (MRM, Inc.)
+# Millennial Resort Manager (MRM, Inc.)
 ---
 
 #### Product Owner
@@ -9,36 +9,63 @@
 ##### Jared Greenfield
 
 #### Scrum Leaders
-#####
-#####
-#####
-#####
+##### Francis
+##### Dani
+##### Austin B.
+##### Dalton
 
 #### Scrum Teams
 
 #### Scrum Team One
-#####
-#####
-#####
-#####
+##### Francis
+##### James
+##### Ramesh
+##### Eric
+##### Matt H.
 
 #### Scrum Team Two
-#####
-#####
-#####
-#####
+##### Dani
+##### Matt L.
+##### Richard
+##### Caitlin
+##### Kevin
 
 #### Scrum Team Three
-#####
-#####
-#####
-#####
+##### Austin B.
+##### Phillip
+##### Eduardo
+##### Austin D.
+##### Wes
 
 #### Scrum Team Four
-#####
-#####
-#####
-#####
+##### Dalton
+##### Carlos
+##### Alisa
+##### Jacob
+##### Gunardi
+
+#  What is Definition of a Done Increment?
+## What is done?
+
+* Must compile without errors: Daily build rule.
+
+* Tested: Unit tested + Logic Layer, Stored Procedure Approved + Pair program with someone else.
+
+* Standard Documentation: UML automation.
+
+* Exception Handling (Try-Catch): Properly validated + Validation object class for presentation.
+
+* Documentation updates.
+
+* NOT DONE UNIT SUBMITTED! - Resolved Git issue conflicts + Rerun unit test and recompile
+
+* Logic Layer / Data Access made with Interfaces: i.e ( iRoomManager ).
+
+* User Interface needs to look good and have human readable values
+
+* Lookup Table procedures.
+
+* Must follow naming conventions.
 
 # C# Coding Standards and Naming Conventions
 
