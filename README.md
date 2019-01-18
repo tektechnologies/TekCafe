@@ -2,7 +2,7 @@
 
 
 #Product Owner
-## Craig Barkley - [a link](https://github.com/tektechnologies)
+## Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
 
 # Scrum Leaders
 
