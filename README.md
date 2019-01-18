@@ -13,7 +13,7 @@
 ##### Dani
 ##### Austin B.
 ##### Dalton
-
+---
 ## Scrum Teams
 
 ### Scrum Team One
@@ -85,77 +85,52 @@
 
 
 
-***Why: consistent with the Microsoft's .NET Framework and easy to read.***
+***Add to READ.me below.***
 
-#### 3. Do not use Hungarian notation or any other type identification in identifiers
+#### 3. 
 
+#### 4. 
 
+#### 5. 
 
-#### 4. Do not use Screaming Caps for constants or readonly variables:
+#### 6. 
 
+#### 7. 
 
+#### 8. 
 
-#### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
+#### 9. 
 
+#### 10. 
 
+#### 11. 
 
+#### 12. 
 
-#### 6. Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, Xml, Ftp, Uri.
+#### 13. 
 
+#### 14.
 
+#### 15. 
 
-#### 7. Do use PascalCasing for abbreviations 3 characters or more (2 chars are both uppercase):
+#### 16. 
 
+#### 17. 
 
+#### 18. 
 
+#### 19. 
 
-#### 8. Do not use Underscores in identifiers. Exception: you can prefix private static variables with an underscore:
+#### 20. 
 
+#### 21. 
 
+#### 22. 
 
-#### 9. Do use predefined type names instead of system type names like Int16, Single, UInt64, etc.
-
- 
-
-#### 10. Do use implicit type var for local variable declarations. Exception: primitive types (int, string, double, etc) use predefined names. 
-
-#### 11. Do use noun or noun phrases to name a class. 
-
-
-#### 12. Do prefix interfaces with the letter I. Interface names are noun (phrases) or adjectives.
-
-#### 13. Do name source files according to their main classes. Exception: file names with partial classes reflect their source or purpose, e.g. designer, generated, etc. 
-
-
-#### 14. Do organize namespaces with a clearly defined structure: 
-
-#### 15. Do vertically align curly brackets: 
-
-#### 16. Do declare all member variables at the top of a class, with static variables at the very top.
-
-#### 17. Do use singular names for enums. Exception: bit field enums.
-
-
-#### 18. Do not explicitly specify a type of an enum or values of enums (except bit fields):
-
-
-
-#### 19. Do not use an "Enum" suffix in enum type names:
-
-
-#### 20. Do not use "Flag" or "Flags" suffixes in enum type names:
-
-#### 21. Do use suffix EventArgs at creation of the new classes comprising the information on event:
-
-
-#### 22. Do name event handlers (delegates used as types of events) with the "EventHandler" suffix, as shown in the following example:
-
-
-#### 23. Do not create names of parametres in methods (or constructors) which differ only by the register:
-
-
+#### 23. 
 
 #### 24.
+
 #### 25. 
 
 
@@ -165,3 +140,4 @@
 2. [DoFactory C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards) 
 3. [MSDN Naming Guidelines](http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx)
 4. [MSDN Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+5. [ktaranov/naming-convention](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
