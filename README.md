@@ -1,13 +1,44 @@
 # MillennialResortManager (MRM, Inc.)
+---
 
+#### Product Owner
 
-##Product Owner
+##### Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
 
-# Craig Barkley - [GitHub Profile](https://github.com/tektechnologies)
+#### Database Administrator
+##### Jared Greenfield
 
-# Scrum Leaders
+#### Scrum Leaders
+#####
+#####
+#####
+#####
 
-#Scrum Teams
+#### Scrum Teams
+
+#### Scrum Team One
+#####
+#####
+#####
+#####
+
+#### Scrum Team Two
+#####
+#####
+#####
+#####
+
+#### Scrum Team Three
+#####
+#####
+#####
+#####
+
+#### Scrum Team Four
+#####
+#####
+#####
+#####
 
 # C# Coding Standards and Naming Conventions
 
