@@ -87,7 +87,7 @@
 
 ***Add to READ.me below.***
 
-#### 3. Development Tools
+## 3. Development Tools
 ##### 1. Visual Studio 2017 Enterprise; .Net Build Target 4.6.1 (NOT CORE)
 ##### 2. Database: SQL Server version 2012 Express
 ##### 3. WPF + ASP.NET MVC
@@ -95,49 +95,31 @@
 ##### 5. Entity Framework, Most Stable JSLibrary through NuGet Package Manager (DO NOT USE BETA)
 ##### 6. Discord, Trello, Github
 
-#### 4. 
+## 4. 
 
-#### 5. 
+## 5. 
 
-#### 6. 
+## 6. 
 
-#### 7. 
+## 7. 
 
-#### 8. 
+## 8. 
 
-#### 9. 
+## 9. 
 
-#### 10. 
+## 10. 
 
-#### 11. 
+## 11. 
 
-#### 12. 
+## 12. 
 
-#### 13. 
+## 13. 
 
-#### 14.
+## 14.
 
-#### 15. 
+## 15. 
 
-#### 16. 
-
-#### 17. 
-
-#### 18. 
-
-#### 19. 
-
-#### 20. 
-
-#### 21. 
-
-#### 22. 
-
-#### 23. 
-
-#### 24.
-
-#### 25. 
+ 
 
 
 ## Offical Reference
