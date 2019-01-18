@@ -87,7 +87,13 @@
 
 ***Add to READ.me below.***
 
-#### 3. 
+#### 3. Development Tools
+##### 1. Visual Studio 2017 Enterprise; .Net Build Target 4.6.1 (NOT CORE)
+##### 2. Database: SQL Server version 2012 Express
+##### 3. WPF + ASP.NET MVC
+##### 4. Better Controls - ? - XCEED Community Edition Control Set
+##### 5. Entity Framework, Most Stable JSLibrary through NuGet Package Manager (DO NOT USE BETA)
+##### 6. Discord, Trello, Github
 
 #### 4. 
 
