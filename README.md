@@ -95,7 +95,13 @@
 ##### 5. Entity Framework, Most Stable JSLibrary through NuGet Package Manager (DO NOT USE BETA)
 ##### 6. Discord, Trello, Github
 
-## 4. 
+## 4. DataBase Naming Conventions
+##### 1. Obey C# naming conventions//forever.
+##### 2. Descriptive is better.
+##### 3. DataAccess - Create, Retrieve, update, deactivate, purge.
+##### 4. Logic Layer - Add, Edit, Retrieve, Delete.
+##### 5. DataBase - (snake case) - Insert, Select, Update, Delete.
+##### 6. Presentation(Hungarian) - btn, lst, tst, cbo, pwd.
 
 ## 5. 
 
